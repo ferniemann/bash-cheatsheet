@@ -1,0 +1,189 @@
+[
+    {
+        "command": "mv",
+        "meaning": "move",
+        "tags": [
+            "mv",
+            "move",
+            "bewegen",
+            "verschieben",
+            "umbenennen",
+            "name ändern",
+            "dateiname ändern",
+            "datei umbenennen",
+            "benenne datei um",
+            "verschiebe datei",
+            "verschiebe ordner",
+            "datei verschieben",
+            "ordner verschieben"
+        ],
+        "description": "Verschiebe einen Ordner oder eine Datei von einem Verzeichnis in ein Anderes. Wird als zweiter Parameter statt eines Zielverzeichnisses ein weiterer Dateiname angegeben, wird die erstgenannte Datei in die zweitgenannte Datei umbenannt.",
+        "code": "mv [DATEI] [ZIEL]",
+        "examples": [
+            {
+                "code": "mv style.css assets/styles",
+                "description": "Verschiebt die Datei 'style.css' vom derzeitigen Verzeichnis in das Verzeichnis '.assets/styles'."
+            },
+            {
+                "code": "mv global.css style.css",
+                "description": "Benennt die Datei 'global.css' in die Datei 'style.css' um."
+            }
+        ]
+    },
+    {
+        "command": "cp",
+        "meaning": "copy",
+        "tags": [
+            "cp",
+            "copy",
+            "kopieren",
+            "duplizieren",
+            "datei kopieren",
+            "kopiere datei",
+            "ordner kopieren",
+            "kopiere ordner",
+            "ordner duplizieren",
+            "dupliziere ordner"
+        ],
+        "description": "Kopiere einen Ordner oder eine Datei",
+        "code": "cp [DATEI] [ZIEL]",
+        "examples": [
+            {
+                "code": "cp style.css assets/styles",
+                "description": "Kopiert die Datei 'style.css' vom derzeitigen Verzeichnis in das Verzeichnis './assets/styles'."
+            }
+        ]
+    },
+    {
+        "command": "mkdir",
+        "meaning": "make directory",
+        "tags": [
+            "mkdir",
+            "make",
+            "directory",
+            "erstellen",
+            "ordner erstellen",
+            "verzeichnis erstellen",
+            "neuen ordner erstellen",
+            "neues verzeichnis erstellen",
+            "erstelle ordner",
+            "erstelle verzeichnis"
+        ],
+        "description": "Erstelle einen Ordner innerhalb eines Verzeichnisses. Wenn kein Zielverzeichnis angegeben wird, wird der Ordner im derzeitigen Verzeichnis erstellt.",
+        "code": "mkdir [ORDNERNAME] [optional: ZIEL]",
+        "examples": [
+            {
+                "code": "mkdir assets",
+                "description": "Erstellt im aktuellen Verzeichnis den Ordner 'assets'."
+            }
+        ]
+    },
+    {
+        "command": "rm",
+        "meaning": "remove",
+        "tags": [
+            "rm",
+            "remove",
+            "entfernen",
+            "löschen",
+            "papierkorb",
+            "datei entfernen",
+            "ordner entfernen",
+            "datei löschen",
+            "ordner löschen",
+            "lösche datei",
+            "lösche ordner",
+            "entferne datei",
+            "entferne ordner",
+            "verzeichnis löschen",
+            "lösche verzeichnis",
+            "verzeichnis entfernen",
+            "entferne verzeichnis"
+        ],
+        "description": "Entferne eine Datei aus einem Verzeichnis. Wenn nur der Dateiname ohne Verzeichnis angegeben wird, wird die Datei aus dem derzeitigen Verzeichnis './' gelöscht. Mit der Flag '-rf' ist es zudem möglich, einen Ordner zu entfernen.",
+        "code": "rm [DATEI]",
+        "examples": [
+            {
+                "code": "rm style.css",
+                "description": "Entfernt die Datei 'style.css' aus dem derzeitigen Verzeichnis."
+            },
+            {
+                "code": "rm assets/styles/style.css",
+                "description": "Entfernt die Datei 'style.css' aus dem Verzeichnis './assets/styles'."
+            },
+
+            {
+                "code": "rm -rf assets",
+                "description": "Entfernt den Ordner 'assets' aus dem derzeitigen Verzeichnis."
+            }
+        ]
+    },
+    {
+        "command": "cat",
+        "meaning": "concatenate",
+        "tags": [
+            "cat",
+            "concatenate",
+            "anzeigen",
+            "auslesen",
+            "datei anzeigen",
+            "datei auslesen",
+            "datei lesen",
+            "text",
+            "inhalt",
+            "dateiinhalt",
+            "inhalt auslesen",
+            "dateiinhalt auslesen",
+            "inhalt anzeigen",
+            "dateiinhalt anzeigen",
+            "datei inhalt",
+            "datei text",
+            "text lesen",
+            "text auslesen"
+        ],
+        "description": "Liest den Textinhalt einer Datei aus und zeigt ihn im Terminal an.",
+        "code": "cat [DATEI]",
+        "examples": [
+            {
+                "code": "cat readme.txt",
+                "description": "Zeigt den Textinhalt der Datei 'readme.txt' aus dem derzeitigen Verzeichnis an."
+            }
+        ]
+    },
+    {
+        "command": "cd",
+        "meaning": "change directory",
+        "tags": [
+            "cd",
+            "change directory",
+            "wechseln",
+            "ordner wechseln",
+            "anderen ordner",
+            "in einen ordner",
+            "in einen anderen ordner",
+            "aus ordner heraus",
+            "aus einem ordner heraus",
+            "in ordner wechseln",
+            "ordner ändern",
+            "wechsel ordner",
+            "wechsel verzeichnis"
+        ],
+        "description": "Navigiert in den angegebenen Ordner oder den angegebenen Pfad. Ebenso ist es möglich, aus Ordnern heraus in einen übergeordneten Ordner zu navigieren.",
+        "code": "cd [ORDNER]",
+        "examples": [
+            {
+                "code": "cd assets",
+                "description": "Wechselt vom derzeitigen Verzeichnis in den Ordner './assets'."
+            },
+            {
+                "code": "cd assets/styles/",
+                "description": "Wechselt vom derzeitigen Verzeichnis in den Ordner 'styles' im Verzeichnis 'assets'."
+            },
+
+            {
+                "code": "cd ..",
+                "description": "Navigiert vom derzeitigen Verzeichnis in den übergeordneten Ordner."
+            }
+        ]
+    }
+]
