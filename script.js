@@ -105,6 +105,7 @@ function filterCommands(e) {
         searchTerm = new RegExp("\\b" + e.target.value.trim(), "i");
     } else {
         searchTerm = new RegExp("\\b" + search.value.trim(), "i");
+        search.blur();
     }
 
     const searchResults = commands.filter((command) => searchTerm.test([...command.tags]));
