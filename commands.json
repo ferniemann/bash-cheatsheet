@@ -45,7 +45,7 @@
             "ordner duplizieren",
             "dupliziere ordner"
         ],
-        "description": "Kopiere einen Ordner oder eine Datei",
+        "description": "Kopiere einen Ordner oder eine Datei (erster Parameter) an in ein angegebenes Zielverzeichnis (zweiter Parameter)",
         "code": "cp [DATEI] [ZIEL]",
         "examples": [
             {
@@ -183,6 +183,113 @@
             {
                 "code": "cd ..",
                 "description": "Navigiert vom derzeitigen Verzeichnis in den übergeordneten Ordner."
+            }
+        ]
+    },
+    {
+        "command": "rmdir",
+        "meaning": "remove directory",
+        "tags": [
+            "rm",
+            "remove directory",
+            "ordner löschen",
+            "ordner entfernen",
+            "entferne ordner",
+            "lösche ordner",
+            "entferne verzeichnis",
+            "lösche verzeichnis",
+            "verzeichnis entfernen",
+            "verzeichnis löschen"
+        ],
+        "description": "Löscht einen Ordner. Wichtig: Der zu löschende Ordner muss leer sein, ansonsten ist der Befehl 'rm -rf' zu benutzen.",
+        "code": "rmdir [ORDNER]",
+        "examples": [
+            {
+                "code": "rmdir assets",
+                "description": "Löscht im derzeitigen Verzeichnis den leeren Ordner 'assets'."
+            }
+        ]
+    },
+    {
+        "command": "touch",
+        "meaning": "touch",
+        "tags": [
+            "touch",
+            "datei erstellen",
+            "dateien erstellen",
+            "erstelle datei",
+            "erstelle dateien",
+            "neue datei erstellen",
+            "neue dateien erstellen"
+        ],
+        "description": "Erstellt eine neue Datei im angegebenen Verzeichnis. Sollen mehrere Dateien erstellt werden, können diese einfach mit entsprechendem Pfad hintereinander als weitere Parameter angegeben werden.",
+        "code": "touch [DATEINAME]",
+        "examples": [
+            {
+                "code": "touch index.html",
+                "description": "Erstellt die Datei 'index.html' im derzeitigen Verzeichnis."
+            },
+            {
+                "code": "touch index.html assets/styles/style.css",
+                "description": "Erstellt die Datei 'index.html' im derzeitigen Verzeichnis und die Datei 'style.css' im Verzeichnis './assets/styles' (wichtig: dieses Verzeichnis muss bereits existieren)."
+            }
+        ]
+    },
+    {
+        "command": "ls",
+        "meaning": "list",
+        "tags": [
+            "ls",
+            "list",
+            "ordner anzeigen lassen",
+            "ordner auflisten",
+            "dateien auflisten",
+            "dateien anzeigen lassen",
+            "verzeichnisse anzeigen lassen",
+            "verzeichnisse auflisten",
+            "liste",
+            "auflisten"
+        ],
+        "description": "Listet sichtbare Dateien und Ordner im Terminal auf. Um zusätzlich 'unsichtbare' Dateien zu inkludieren, wird die Flag '-a' benutzt. Für eine detaillierte Ansicht wird die Flag '-l' benutzt.",
+        "code": "ls",
+        "examples": [
+            {
+                "code": "ls",
+                "description": "Listet alle sichtbaren Dateien und Ordner im derzeitigen Verzeichnis auf."
+            },
+            {
+                "code": "ls -a",
+                "description": "Listet alle sichtbaren und versteckten Dateien und Ordner im derzeitigen Verzeichnis auf."
+            },
+            {
+                "code": "ls -l",
+                "description": "Listet alle sichtbaren Dateien und Ordner im derzeitigen Verzeichnis in einer detaillierten Ansicht auf."
+            },
+            {
+                "code": "ls -al",
+                "description": "Listet alle sichtbaren und versteckten Dateien und Ordner im derzeitigen Verzeichnis in einer detaillierten Ansicht auf."
+            }
+        ]
+    },
+    {
+        "command": "pwd",
+        "meaning": "print working directory",
+        "tags": [
+            "pwd",
+            "print working directory",
+            "position anzeigen lassen",
+            "wo bin ich",
+            "ordner anzeigen lassen",
+            "verzeichnis anzeigen lassen",
+            "aktueller ordner",
+            "aktuelles verzeichnis"
+        ],
+        "description": "Gibt das derzeitige Verzeichnis im Terminal aus.",
+        "code": "pwd",
+        "examples": [
+            {
+                "code": "pwd",
+                "description": "Gibt das derzeitige Verzeichnis, beginnend ab der Root-Ebene, aus, z.B. '/Users/john/Documents'."
             }
         ]
     }

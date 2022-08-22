@@ -1,5 +1,6 @@
 const commands = [];
 const search = document.querySelector("#search");
+const btnSearch = document.querySelector(".btn-search");
 
 getCommands();
 
@@ -94,10 +95,17 @@ function setIndividualHeights() {
     }
 }
 
+btnSearch.addEventListener("click", filterCommands);
 search.addEventListener("input", filterCommands);
 
 function filterCommands(e) {
-    const searchTerm = new RegExp("\\b" + e.target.value.trim(), "i");
+    let searchTerm;
+
+    if (e.target.value) {
+        searchTerm = new RegExp("\\b" + e.target.value.trim(), "i");
+    } else {
+        searchTerm = new RegExp("\\b" + search.value.trim(), "i");
+    }
 
     const searchResults = commands.filter((command) => searchTerm.test([...command.tags]));
 

@@ -116,14 +116,20 @@ h3 {
     grid-row: span 40;
 }
 
-.search-icon {
-    fill: var(--clr-bg);
+.btn-search {
+    all: unset;
 
     position: absolute;
     left: 1rem;
     width: 1rem;
     top: 50%;
     transform: translateY(-50%);
+
+    pointer-events: none;
+}
+
+.search-icon {
+    fill: var(--clr-bg);
 
     pointer-events: none;
 }
